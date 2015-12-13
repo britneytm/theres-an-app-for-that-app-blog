@@ -2,11 +2,18 @@
     <head>
         <title>There's An App For That</title>
     </head>
-    <h1>There's An App For That</h1>
   <div>
-    <body>
-      <p>Hi there!</p>
-      <p>It worx!</p>
-    </body>
+    <h1>There's An App For That</h1>
   </div>
+  <div>
+    <h3>There's An App For That</h3>
+  </div>
+{% for post in posts %}
+  <div>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <h5>{{ post.published_date }}</h5>
+    <p>{{ post.text|linebreaks }}</p>
+  </br>
+  </div>
+{% endfor %}
 </html>
